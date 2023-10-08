@@ -36,6 +36,7 @@ header{
 .abrir-menu,
 .cerrar-menu {
     display: none;
+    float: left;
 }
 
 @media screen and (max-width: 550px) {
@@ -87,6 +88,26 @@ header{
         color: #ecececec;
     }
 }
+@media (max-width:1024px){
+    header{
+        background-color: rgb(19, 53, 69); 
+}
+}
+
+@media (max-width:768px){
+    header{
+        background-color: rgb(38, 94, 113);
+    }
+    nav{
+        flex-direction: colum;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1.25rem;
+    }
+    .navbar{
+        padding: 20px;
+    }
+}
 
 /*Página inicio*/
 .fondo-1 img{
@@ -120,6 +141,7 @@ section img{
     justify-content: left;
     padding: 2rem;
     max-width: 10rem;
+    height: 7px;
 }
 
 
@@ -151,7 +173,7 @@ section img{
 
 /*pie de pagina*/
 footer{
-    height: 38px;
+    height: 30px;
     position: fixed;
     bottom: 0;
     background-color: #141616;
@@ -164,12 +186,12 @@ footer{
 .footer-social{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 110px;
+    justify-content: center;
+    height: 100px;
     background-color: #f0f0f0;
 }
 .footer-social img{
-    width: 110px;
+    width: 90px;
     border-radius: 30%;
 }
 
@@ -213,6 +235,7 @@ header{
 .banner div h1{
     font-family: 'Rubik Iso', cursive;
     font-size: 30px;
+    text-align: center;
     
 }   
 
@@ -228,12 +251,12 @@ header{
     flex-direction: column;
     flex-wrap: wrap; 
     justify-content: space-evenly;
-    align-items: center; 
+    align-items: right; 
 }
 
 
 .card div{
-    text-align: left;
+    text-align: center;
     padding-top: 7px;
 
 }
@@ -242,12 +265,15 @@ header{
     position: absolute;
     top: 4px;
     right: 4px;
-    /*width: 100%;*/
 }
 
 
 
-
+.imagen-contacto{
+    justify-content: left;
+    width: 600px;
+    height: 350px;
+}
 
 
 
