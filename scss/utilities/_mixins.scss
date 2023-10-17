@@ -1,0 +1,7 @@
+@mixin quienessomos ($cover, $center, $center, $center){
+display: flex;
+background-size: $cover;
+background-position: $center;
+justify-content: $center;
+align-items: $center;
+}

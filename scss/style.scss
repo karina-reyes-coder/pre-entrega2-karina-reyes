@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-@import "reset";
-@import "header";
-@import "footer";
+@import "./base/reset";
+@import "./layout/header";
+@import "./utilities/mixins";
+@import "./componentes/footer";
 
 $primary-color: #0a054d;
 $font-family: 'Roboto', sans-serif;
@@ -51,13 +52,9 @@ body {
 
 /*quienes-somos*/
 .fondo-quienes-somos {
+    @mixin quienessomos ($cover, $center, $center, $center);
     background-image: url('./assets/basket5.jpg');
-    background-size: cover;
-    background-position: center;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .mision-valores {
@@ -141,6 +138,7 @@ main {
 .grid-contenedor-tienda {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
     "equipos equipos equipos"
     "accesorios accesorios accesorios"
@@ -173,6 +171,16 @@ main {
     .precio {
         font-size: 18px;
         font-weight: bold;
+    }
+}
+@media (max-width: 1024px){
+    header{
+        background-color: gray;
+    }
+}
+@media (max-width: 768px){
+    header{
+        background-color: gray;
     }
 }
 
@@ -236,3 +244,4 @@ section mapa {
         }
     }
     }
+    
