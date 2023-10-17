@@ -1,0 +1,116 @@
+/*Barra de navegacion*/
+header {
+    background-color: $primary-color;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    img {
+        width: 20px;
+        height: auto;
+    }
+}
+
+.menu-icon{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+        background-color: #fff;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+        border-radius: 3px;
+        transition: 0.4s;
+    
+}
+
+
+.navbar {
+    list-style: none;
+    display: flex;
+    margin: left;
+    padding: 0;
+    li {
+        margin-right: 25px;
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.4s;
+            &:hover {
+                text-decoration: none;
+                color: yellowgreen;
+                background-color: blue;
+                
+            }
+        }
+    }
+}
+
+/* Estilos para hacer la navegación responsive
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        .nav-links {
+            margin-top: 10px;
+            flex-direction: column;
+            li {
+                margin: 10px 0;
+            }
+        }
+    }
+}
+*//* Mostrar el icono en pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: $primary-color;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1;
+
+        li {
+            margin: 10px 0;
+            text-align: center;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    /* Estilo para la animación del menú hamburguesa */
+    .bar {
+        &.open {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        &.middle {
+            opacity: 0;
+        }
+
+        &.close {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+}

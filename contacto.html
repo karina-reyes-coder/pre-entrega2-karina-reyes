@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta propiedad= "og:title" contenido= Club Deportivo Osos basquetbol>
-    <meta name="Club de basquetbol" content="Club deportivo Osos">
+    <meta name="Club de basquetbol" content="Club deportivo Osos, somos un club de basquetbol, orientado al entrenamiento de niños, jovenes y adultos apasionados por este deporte">
     <title>Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -13,10 +13,15 @@
 <body>
 <!-- barra de navegacion -->
     <header>
-        <img class="logo" src="./assets/logo.png" alt="Logo Club Deportivo Osos">
-        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
-        <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+        <nav>
+            <div class="menu-icon">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <nav>
+                <img class="logo" src="./assets/logo.png" alt="Logo Club Deportivo Osos">
+            </nav>
             <ul class="navbar">
                 <li><a href="#">Contacto</a></li>
                 <li><a href="./quienes-somos.html">Quienes somos</a></li>
@@ -32,61 +37,40 @@
     </section>
 
 <!-- formulario de contacto -->
-    <section class="mapa">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106495.43605280823!2d-70.8191826609375!3d-33.4758096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c3060cdaefd1%3A0x31e9e2b55d989f8f!2sMultiCancha%20San%20Sebastian!5e0!3m2!1ses-419!2scl!4v1695507326281!5m2!1ses-419!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <!-- <label for ="textArea">ESCRIBENOS:</label>
-        <textarea name="" id="textarea" cols="30" rows="10"></textarea> -->
+    <section class="contacto">
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106495.43605280823!2d-70.8191826609375!3d-33.4758096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c3060cdaefd1%3A0x31e9e2b55d989f8f!2sMultiCancha%20San%20Sebastian!5e0!3m2!1ses-419!2scl!4v1695507326281!5m2!1ses-419!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-form">
+            <h2>Formulario de Contacto</h2>
+            <form action="tu_servidor_de_correo.php" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
-
-    <!-- footer social -->
-<!--         
-    <main class="grid-container">
-        <section class="google-map">
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106495.43605280823!2d-70.8191826609375!3d-33.4758096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c3060cdaefd1%3A0x31e9e2b55d989f8f!2sMultiCancha%20San%20Sebastian!5e0!3m2!1ses-419!2scl!4v1695507326281!5m2!1ses-419!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-            <!-- </div>
-        </section>
-        <section class="instagram">
-            <img src="./assets/instagram.png" alt="logo instagram">
-            <img src="https://www.flaticon.com/free-icons/instagram-logo" alt="logo instagram">
-        </section>
-        <section class="facebook">
-            <img src="./assets/facebook.png" alt="logo facebook">
-            <img src="https://www.flaticon.com/free-icons/facebook" alt="logo facebook">
-        </section>
-        <section class="twitter">
-            <img src="./assets/twitter.png" alt="logo twitter">
-            <img src="https://www.flaticon.com/free-icons/twitter-social-badge" alt="logo twitter">
-        </section>
-        <section class="whatsapp">
-            <img src="./assets/whatsapp.png" alt="logo whatsapp">
-            <img src="https://www.flaticon.com/free-icons/whatsapp" alt="logo whatsapp">
-        </section>
-        <section class="gmail">
-            <img src="./assets/gmail.png" alt="logo gmail">
-            <img src="https://www.flaticon.com/free-icons/gmail" alt="logo gmail">
-        </section>
-    </main> -->
-
-
-
-
-
-    <footer class="footer-social">
-        <img src="./assets/instagram.png" alt="logo instagram">
-        <img src="./assets/facebook.png" alt="logo facebook">
-        <img src="./assets/twitter.png" alt="logo twitter">
-        <img src="./assets/whatsapp.png" alt="logo whatsapp">
-        <img src="./assets/gmail.png" alt="logo gmail">
-    </footer>
+    
     <footer>
+        <div class="social-icons">
+            <a href="#"><img src="./assets/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="./assets/gmail.png" alt="Email"></a>
+            <a href="#"><img src="./assets/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="./assets/whatsapp.png" alt="WhatsApp"></a>
+        </div>
         Todos los derechos reservados @krcal2023
     </footer>
 
 
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    
-
 </body>
 </html>

@@ -148,7 +148,7 @@ section img{
 /*Página Quienes Somos*/
 .fondo-quienes-somos img{
     display: flex;
-    /*background-image: url"(../assets/basket5.jpg)";*/
+    background-image: url"(../assets/basket5.jpg)";
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

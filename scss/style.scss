@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import "reset";
+@import "header";
+@import "footer";
 
 $primary-color: #0a054d;
 $font-family: 'Roboto', sans-serif;
@@ -11,130 +14,26 @@ body {
     background-color: #110890;
 }
 
-header {
-    background-color: $primary-color;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: fixed;
+/*Página inicio*/
+.fondo-1 img{
     width: 100%;
+    height: 400px;
+    overflow: hidden;
 }
-
-nav {
-    display: flex;
-    align-items: center;
+.entrenadores{
+    top: 10px;
+    background-color: #4725c2;
+    color-scheme: white;
+    text-align: center;
 }
-
-.logo {
-    img {
-        width: 20px;
-        height: auto;
-    }
+.fondo-2 img{
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
 }
-
-.menu-icon{
-    display: none;
-    cursor: pointer;
-    .bar{
-        background-color: #fff;
-        height: 3px;
-        width: 25px;
-        margin: 4px 0;
-        border-radius: 3px;
-        transition: 0.4s;
-    }
-}
-
-
-.navbar {
-    list-style: none;
-    display: flex;
-    margin: left;
-    padding: 0;
-    li {
-        margin-right: 25px;
-        a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.4s;
-            &:hover {
-                text-decoration: none;
-                color: yellowgreen;
-                background-color: blue;
-                
-            }
-        }
-    }
-}
-
-/* Estilos para hacer la navegación responsive
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        .nav-links {
-            margin-top: 10px;
-            flex-direction: column;
-            li {
-                margin: 10px 0;
-            }
-        }
-    }
-}
-*//* Mostrar el icono en pantallas pequeñas (menos de 768px) */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        background-color: $primary-color;
-        position: absolute;
-        top: 40px;
-        right: 0;
-        width: 100%;
-        padding: 10px 0;
-        z-index: 1;
-
-        li {
-            margin: 10px 0;
-            text-align: center;
-
-            a {
-                color: #fff;
-                text-decoration: none;
-            }
-        }
-    }
-
-    /* Estilo para la animación del menú hamburguesa */
-    .bar {
-        &.open {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        &.middle {
-            opacity: 0;
-        }
-
-        &.close {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-    }
-}
-
 .fondo-1{
     text-align: center;
     padding: 40px;
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
     h1 {
         font-size: 26px;
         color: #fff;
@@ -149,46 +48,27 @@ nav {
     }
 }
 
-footer{
-    background-color: $primary-color;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-
-    .social-icons {
-        a {
-            display: inline-block;
-            margin: 0 10px;
-        }
-        img {
-            max-width: 24px;
-        }
-    }
-}
-
 
 /*quienes-somos*/
 .fondo-quienes-somos {
-    background-image: url('../assets/basket5.jpg');
+    background-image: url('./assets/basket5.jpg');
     background-size: cover;
     background-position: center;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
 }
 
 .mision-valores {
-    text-align: justify;
-
+    text-align: center;
     h1 {
-        font-size: 36px;
+        font-size: 22px;
         margin: 0;
         color: #fff;
     }
     h3 {
-        font-size: 30px;
+        font-size: 18px;
         margin: 0;
         color: #fff;
     }
@@ -198,7 +78,7 @@ footer{
 @media (max-width: 768px) {
     .center-text {
         h1 {
-            font-size: 24px;
+            font-size: 18px;
         }
     }
 }
@@ -206,6 +86,15 @@ footer{
 
 
 /* categorias */
+main {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card {
     background-color: #fff;
     border-radius: 5px;
@@ -236,14 +125,6 @@ footer{
             margin: 0;
         }
     }
-/*
-    .side-paragraph {
-        background-color: #3498db;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        margin: 0;
-    }*/
 }
 
 /* Estilos para hacer la página responsive */
@@ -254,3 +135,104 @@ footer{
     }
 }
 
+
+
+/*contenedor tienda*/
+.grid-contenedor-tienda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "equipos equipos equipos"
+    "accesorios accesorios accesorios"
+    "souvenir souvenir souvenir";
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .precio {
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+
+/* contacto */
+.imagen-contacto {
+    width: 100%;
+    height: 350px;
+}
+section mapa {
+    padding: 20px;
+    align-items: center;
+    }
+    
+    .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    
+    
+    .mapa {
+        flex: 1;
+    }
+    
+    .contact-form {
+        flex: 1;
+        text-align: center;
+    
+        h2 {
+            font-size: 24px;
+        }
+    
+        form {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+    
+            label {
+                display: block;
+                margin: 10px 0;
+            }
+    
+            input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            button {
+                background-color: #3498db;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    }
